@@ -1,5 +1,7 @@
 """
 This project is created to compute square sides
+
+Github: https://github.com/misha2956/lab1_z3/
 """
 
 from math import sqrt
