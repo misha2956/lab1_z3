@@ -1,3 +1,3 @@
-# lab1 z2
+# lab1 z3
 
-This project is created to validate a board
+This project is created to compute square sides 
