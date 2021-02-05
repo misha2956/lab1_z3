@@ -2,7 +2,7 @@
 This project is created to compute square sides
 """
 
-from math import tan, sqrt
+from math import sqrt
 
 def get_base_and_side_len(side_a: float, side_b: float, side_c: float) -> tuple:
     """
@@ -37,8 +37,8 @@ def get_square_sides(
     """
     This function computes the solution to the problem
 
-    >>> get_square_sides(5, 5, 6, 0.0001)
-    0.978515625
+    >>> get_square_sides(10, 12, 10, 0.001)
+    3.599853515625
     """
 
     base, side = get_base_and_side_len(side_a, side_b, side_c)
@@ -46,11 +46,11 @@ def get_square_sides(
     x_min = 0
     x_max = base / 2
 
-    side_lamb = lambda x: x * tan(sqrt(
+    side_lamb = lambda x: x * sqrt(
         side ** 2 - (base / 2) ** 2
     ) / (
         base / 2
-    ))
+    )
 
     opt_func = lambda x: side_lamb(x) - (base - x * 2)
 
